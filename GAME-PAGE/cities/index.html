@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <p>GAME-PAGE</p>
+        </div>
+
+        <button id="burger" class="burger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+
+        <ul>
+            <li><a href="/Users/yarex/Desktop/GAME-PAGE/main/index.html">Home</a></li>
+            <li><a href="#">Tic Tac Toe</a></li>
+            <li><a href="#">Cities</a></li>
+            <li><a href="#">Colors</a></li>
+            <li><a href="#">Numbers</a></li>
+            <li><a href="https://ru.wikipedia.org/wiki/Города_(игра)" target="_blank">RULES</a></li>
+        </ul>
+    </nav>
+
+
+    <div id="main" class="main">
+
+        <h1 class="russian_header">Russian cities only</h1>
+
+
+        <div class="main_inner">
+
+
+            <!-- NEW REQUIREMENTS  -->
+
+            <div class='answers'>
+                <div class="robot_answer">
+                    <p class="current_city"> Текущий город: </p>
+                    <p id="current_city_name"></p>
+                </div>
+
+                <div class="letter">
+                    <p class="current_letter_label">Начинай с буквы: </p>
+                    <p id="current_letter"></p>
+                </div>
+            </div>
+
+            <!-- INPUT -->
+            <div class="form">
+                <input type="text" name="name" class="question" id="nme" required autocomplete="off" />
+                <label for="nme"><span id="label1">Напиши город и нажми 'ENTER'</span></label>
+            </div>
+            <!-- СOUNTER -->
+
+            <div class="count">
+                <div class='best_score'>
+                    <p class="best_label">Рекорд: </p>
+                    <p id="best_score_num"></p>
+                </div>
+
+                <div class="current_score">
+                    <p class="current_label"> Счёт: </p>
+                    <p id="current_score_num"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="game_over">
+        <div class="game_over_inner">
+            <h1 class="go_header">GAME OVER!</h1>
+            <button href="#" class="btn" id="startAgain">WANNA START AGAIN?</button>
+        </div>
+    </div>
+
+
+
+
+    <script src='script.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,290 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+    color: white;
+}
+
+.display_none {
+    display: none;
+}
+
+.display_flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* MAIN PAGE */
+
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border: 1px solid black;
+    background-color: rgba(57, 107, 63, 0.97);
+    ;
+}
+
+.main_inner {
+    flex-direction: column;
+}
+
+.main_header {
+    width: auto;
+    text-align: center;
+    color: transparent;
+    font-weight: 900;
+    font-size: 40px;
+    letter-spacing: 3px;
+    text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+button {
+    background: transparent;
+    color: #fff;
+    border: 3px solid #5C1628;
+    background-color: #A84A63;
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+    font-size: 24px;
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+    box-shadow: 3px 3px 6px 0px rgba(50, 50, 50, 0.68);
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    font-weight: 900;
+    transition: 0.2s ease-in-out;
+    letter-spacing: 2px;
+}
+
+.button-pressure marquee {
+    position: absolute;
+    width: 90%;
+    top: 125%;
+    left: 5%;
+    font: 18px/1 "Margarine", sans-serif;
+}
+
+.button-pressure marquee span {
+    display: inline-block;
+    height: 20px;
+}
+
+.button-pressure marquee span:not(:last-child) {
+    margin-right: 130px;
+}
+
+.button-pressure button:before {
+    content: "OMG YAS";
+    transition: 0.5s ease;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: -15px;
+    font-size: 12px;
+    opacity: 0;
+    position: absolute;
+}
+
+.button-pressure button:hover {
+    background-color: #a84a63a8;
+    box-shadow: 0px 0px 0px 0px rgba(50, 50, 50, 0.68);
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(255, 255, 255, 0.0);
+    transform: translate(3px, -3px);
+}
+
+.button-pressure button:hover:before {
+    animation: omg-yes 1s;
+}
+
+@keyframes omg-yes {
+    50% {
+        opacity: 1;
+    }
+    100% {
+        top: -50px;
+    }
+}
+
+.pulse {
+    position: relative;
+}
+
+.pulse:before,
+.pulse:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .4);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    margin: auto;
+    z-index: 4;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    33% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+.pulse:before {
+    animation: pulse 1.5s infinite linear;
+}
+
+.pulse:after {
+    animation: pulse 2s .4s infinite linear;
+}
+
+.pulse:hover:before,
+.pulse:hover:after {
+    display: none;
+}
+
+
+/* TIMER FORM */
+
+.timer_form_header {
+    margin-right: 2%;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+
+/* GAME CHOICE */
+
+:root {
+    --button-height: 3rem;
+    --color-text: rgba(0, 0, 0, 0.25);
+    --color-text-shadow: rgba(255, 255, 255, 0.15);
+    --color-page-bg: #B9B5AA;
+    --color-bg: #899095;
+    --color-bg-light: #969DA3;
+    --color-bg-dark: #7D878F;
+    --color-overlay-light: rgba(255, 255, 255, 0.2);
+    --color-overlay-medium: rgba(0, 0, 0, 0.1);
+    --color-overlay-dark: rgba(0, 0, 0, 0.2);
+    --color-tab-focus: rgba(255, 255, 255, 0.15);
+}
+
+.red-button {
+    --color-bg: #E44E55;
+    --color-bg-light: #E47479;
+    --color-bg-dark: #D13239;
+}
+
+.green-button {
+    --color-bg: #00A07D;
+    --color-bg-light: #00AF8A;
+    --color-bg-dark: #008F70;
+}
+
+.blue-button {
+    --color-bg: #0066B4;
+    --color-bg-light: #3981CA;
+    --color-bg-dark: #004EAD;
+}
+
+.yellow-button {
+    --color-bg: #FFC054;
+    --color-bg-light: #FFD996;
+    --color-bg-dark: #F2AA30;
+}
+
+.retro-button {
+    position: relative;
+    appearance: none;
+    box-sizing: border-box;
+    background: var(--color-bg);
+    height: var(--button-height);
+    min-width: var(--button-height);
+    border-radius: calc(var(--button-height) / 2);
+    border: 0;
+    cursor: pointer;
+    margin: 6px 6px;
+    transition: all 200ms ease;
+    box-shadow: -1px -1px 1px var(--color-bg), 0 0 0 4px var(--color-overlay-medium), 1px 1px 1px var(--color-bg-dark), inset 0 0 0 var(--color-overlay-dark), inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
+}
+
+.game_choice a {
+    text-decoration: none;
+    font-size: calc(var(--button-height) / 3);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--color-text);
+    text-shadow: 1px 1px var(--color-text-shadow);
+    letter-spacing: 0.1em;
+}
+
+.retro-button::-moz-focus-inner {
+    outline: none;
+    border: none;
+}
+
+.retro-button:focus {
+    outline: none;
+    box-shadow: -1px -1px 1px var(--color-bg-dark), 0 0 0 4px var(--color-tab-focus), 1px 1px 1px var(--color-bg-dark), inset 0 0 0 var(--color-overlay-dark), inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
+}
+
+.retro-button:hover {
+    box-shadow: -1px -1px 1px var(--color-bg-dark), 0 0 0 4px var(--color-overlay-dark), 1px 1px 1px var(--color-bg-dark), inset 0 0 0 var(--color-overlay-dark), inset 0.5rem 0.5rem 0.25rem var(--color-bg-light);
+}
+
+.retro-button:active {
+    box-shadow: inset 1px 1px 1px var(--color-bg), 0 0 0 4px var(--color-overlay-dark), inset -1px -1px 1px var(--color-bg-light), inset 0.5rem 0.5rem 0.75rem var(--color-bg-dark), inset 0.5rem 0.5rem 0.5rem var(--color-bg-light);
+}
+
+.game_choice {
+    background: #396B3F;
+    border-radius: 2px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.bottom-button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: var(--color-bg);
+    margin: 1vh;
+    padding: 1vw;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 6px 0px rgba(50, 50, 50, 0.68);
+}
+
+.game_header {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, .2);
+    text-shadow: 1px 1px;
+    font-weight: 900;
+}
