@@ -37,7 +37,6 @@ body {
     align-items: center;
     border: 1px solid black;
     background-color: rgba(57, 107, 63, 0.97);
-    ;
 }
 
 .main_inner {
@@ -54,7 +53,7 @@ body {
     text-shadow: 5px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-button {
+.main_button button {
     background: transparent;
     color: #fff;
     border: 3px solid #5C1628;
@@ -133,7 +132,7 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, .4);
+    background: rgba(255, 255, 255, 0.4);
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -226,7 +225,7 @@ button {
     box-sizing: border-box;
     background: var(--color-bg);
     height: var(--button-height);
-    min-width: var(--button-height);
+    min-width: calc(var(--button-height)*4);
     border-radius: calc(var(--button-height) / 2);
     border: 0;
     cursor: pointer;
@@ -240,6 +239,11 @@ button {
     font-size: calc(var(--button-height) / 3);
     font-weight: 800;
     text-transform: uppercase;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     color: var(--color-text);
     text-shadow: 1px 1px var(--color-text-shadow);
     letter-spacing: 0.1em;
@@ -273,7 +277,7 @@ button {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background: var(--color-bg);
+    background: rgba(57, 107, 63, 1);
     margin: 1vh;
     padding: 1vw;
     border-radius: 1rem;
